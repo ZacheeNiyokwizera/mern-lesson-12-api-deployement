@@ -8,10 +8,11 @@ app.get("/", (req, res)  => {
     res.send("Hello World !")
 })
 
-app.get("/friends", (req, res)  => {
+app.get("/friends", cors(), (req, res)  => {
     res.send(importData)
 })
 
 app.listen(port, ()  => {
    console.log(`This App is listening on port http://locahost:${port}!`)
 })
+
